@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="CustomActionBarTheme"
+        parent="@style/Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/CustomActionBarTheme.MyActionBar</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/CustomActionBarTheme.MyActionBar</item>
+    </style>
+
+    <style name="CustomActionBarTheme.MyActionBar"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+
+        <item name="android:background">@color/material_deep_teal_500</item>
+        <item name="android:titleTextStyle">@style/CustomActionBarTheme.MyActionBar.TitleTextStyle</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/material_deep_teal_500</item>
+    </style>
+
+    <style name="CustomActionBarTheme.MyActionBar.TitleTextStyle"
+        parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+
+        <item name="android:textColor">@color/orange</item>
+
+    </style>
+
+</resources>
