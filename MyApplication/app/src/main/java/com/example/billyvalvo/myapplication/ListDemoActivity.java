@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
-public class ListDemo extends ListActivity {
+public class ListDemoActivity extends ListActivity {
 
     private TextView selection;
     private static final String[] items={"lorem", "ipsum", "dolor",
@@ -24,15 +24,17 @@ public class ListDemo extends ListActivity {
 
 
     @Override
-    //some people used icicle because it used to be 'freeze' to save instance state
+    // some people use icicle because it used to be 'freeze' to save instance state
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.activity_list_demo);
 
         // this creates the adapter itself using this view, the format of android supplied layout,
         // and populating with items. (you can define your own formats)
-        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items));
+        // (since using multiple choice mode in xml, layout must also support that)
+        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, items));
 
+        // set 'selection' to the text view label which will change based on selected item in list
         selection = (TextView) findViewById(R.id.selection);
     }
 

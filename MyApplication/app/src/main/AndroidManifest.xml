@@ -36,9 +36,25 @@
                 android:value="com.example.billyvalvo.myapplication.MainActivity" />
         </activity>
         <activity
-            android:name=".ListDemo"
+            android:name=".ListDemoActivity"
             android:label="@string/title_activity_list_demo"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.billyvalvo.myapplication.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SpinnerDemoActivity"
+            android:label="@string/title_activity_spinner_demo"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.billyvalvo.myapplication.MainActivity" />
+        </activity>
+        <activity
+            android:name=".GridDemoActivity"
+            android:label="@string/title_activity_grid_demo"
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.billyvalvo.myapplication.MainActivity" />

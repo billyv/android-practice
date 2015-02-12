@@ -10,5 +10,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="list_view_demo">List View Demo</string>
     <string name="title_activity_list_demo">ListDemo</string>
+    <string name="title_activity_spinner_demo">SpinnerDemoActivity</string>
+    <string name="load_spinner_demo">Load Spinner Demo</string>
+    <string name="title_activity_grid_demo">GridDemoActivity</string>
+    <string name="load_grid_demo">Load Grid Demo</string>
 
 </resources>

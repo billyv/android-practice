@@ -82,12 +82,22 @@ public class MainActivity extends ActionBarActivity {
 
     public void loadListDemo(View view) {
 
-        Intent listDemo = new Intent(this, ListDemo.class);
+        Intent listDemo = new Intent(this, ListDemoActivity.class);
 
         // just starting a new page so nothing to do but
         startActivity(listDemo);
 
 
+    }
+
+    public void loadSpinnerDemo(View view) {
+        Intent spinnerDemo = new Intent(this, SpinnerDemoActivity.class);
+        startActivity(spinnerDemo);
+    }
+
+    public void loadGridDemo(View view) {
+        Intent gridDemo = new Intent(this, GridDemoActivity.class);
+        startActivity(gridDemo);
     }
 
 }
