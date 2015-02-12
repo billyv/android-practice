@@ -3,9 +3,9 @@ package com.example.billyvalvo.myapplication;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
 
 
 public class DisplayMessageActivity extends ActionBarActivity {
@@ -25,6 +25,7 @@ public class DisplayMessageActivity extends ActionBarActivity {
         textView.setText(message);
 
         setContentView(textView);
+
 
 //        // altering the text of a pre-existing xml text view in this activity
 //        // currently NOT working

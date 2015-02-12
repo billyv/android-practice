@@ -3,7 +3,6 @@
     <!-- From: file:/Users/billyvalvo/git/EmPubLite/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="app_name">EmPub Lite</string>
-    <string name="hello_world">Hello world!</string>
     <!-- From: file:/Users/billyvalvo/git/EmPubLite/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">

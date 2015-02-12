@@ -80,4 +80,14 @@ public class MainActivity extends ActionBarActivity {
         // by this intent. (In this case, DisplayMessageActivity)
     }
 
+    public void loadListDemo(View view) {
+
+        Intent listDemo = new Intent(this, ListDemo.class);
+
+        // just starting a new page so nothing to do but
+        startActivity(listDemo);
+
+
+    }
+
 }
