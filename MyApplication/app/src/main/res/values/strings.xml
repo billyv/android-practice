@@ -14,5 +14,8 @@
     <string name="load_spinner_demo">Load Spinner Demo</string>
     <string name="title_activity_grid_demo">GridDemoActivity</string>
     <string name="load_grid_demo">Load Grid Demo</string>
+    <string name="title_activity_activity_webview_demo">WebViewDemoActivity</string>
+    <string name="load_webview_demo">Load WebView Demo</string>
+    <string name="url">http://droptokyo.com</string>
 
 </resources>

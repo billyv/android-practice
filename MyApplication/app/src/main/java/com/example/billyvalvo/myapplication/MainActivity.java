@@ -100,4 +100,9 @@ public class MainActivity extends ActionBarActivity {
         startActivity(gridDemo);
     }
 
+    public void loadWebViewDemo(View view) {
+        Intent webDemo = new Intent(this, WebViewDemoActivity.class);
+        startActivity(webDemo);
+    }
+
 }

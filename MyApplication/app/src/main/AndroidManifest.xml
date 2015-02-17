@@ -5,13 +5,15 @@
 
     <uses-sdk android:minSdkVersion="11" />
 
-    <android:uses-permission
+    <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="18" />
+    <uses-permission
+        android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -54,6 +56,14 @@
         <activity
             android:name=".GridDemoActivity"
             android:label="@string/title_activity_grid_demo"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.billyvalvo.myapplication.MainActivity" />
+        </activity>
+        <activity
+            android:name=".WebViewDemoActivity"
+            android:label="@string/title_activity_activity_webview_demo"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
