@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/billyvalvo/git/EmPubLite/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Billy/AndroidStudioProjects/android-practice/EmPubLite/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="about">About</string>
     <string name="app_name">EmPub Lite</string>
-    <!-- From: file:/Users/billyvalvo/git/EmPubLite/app/src/main/res/values/styles.xml -->
+    <string name="help">Help</string>
+    <string name="settings">Settings</string>
+    <!-- From: file:/C:/Users/Billy/AndroidStudioProjects/android-practice/EmPubLite/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->

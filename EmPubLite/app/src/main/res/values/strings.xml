@@ -2,5 +2,8 @@
 <resources>
 
     <string name="app_name">EmPub Lite</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
 
 </resources>
