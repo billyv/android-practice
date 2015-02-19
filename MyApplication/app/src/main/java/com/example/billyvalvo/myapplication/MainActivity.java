@@ -1,11 +1,15 @@
 package com.example.billyvalvo.myapplication;
 
 import android.content.Intent;
+import android.graphics.Point;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.*;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.Console;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -16,6 +20,37 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        resizeButtons(4);
+
+    }
+
+    /**
+     * Resizes demo launch buttons to be some fraction of screen size
+     * However this is screen size, not display size, so does not resize
+     * when a keyboard is popped up, for instance, as using weight would.
+     *
+     * @param fraction (1/fraction)*screen size for size of each button
+     */
+    private void resizeButtons(int fraction) {
+        // Get display size
+        Display screen = getWindowManager().getDefaultDisplay();
+        Point screenSize = new Point();
+        screen.getSize(screenSize);
+
+        int buttonHeight = screenSize.y / fraction;
+
+        // just testing
+        System.out.println("screen y = " + screenSize.y);
+        System.out.println("buttonHeight = " + buttonHeight);
+
+        ViewGroup buttons = (ViewGroup) findViewById(R.id.button_group);
+
+        for (int i = 0; i < buttons.getChildCount(); i++) {
+            Button button = (Button) buttons.getChildAt(i);
+            button.setHeight(buttonHeight);
+        }
+
     }
 
 
@@ -103,6 +138,11 @@ public class MainActivity extends ActionBarActivity {
     public void loadWebViewDemo(View view) {
         Intent webDemo = new Intent(this, WebViewDemoActivity.class);
         startActivity(webDemo);
+    }
+
+    public void loadActionBarDemo(View view) {
+        Intent actionBarDemo = new Intent(this, ActionBarDemoActivity.class);
+        startActivity(actionBarDemo);
     }
 
 }

@@ -9,13 +9,19 @@
     <string name="title_activity_display_message">My Message</string>
     <string name="hello_world">Hello world!</string>
     <string name="list_view_demo">List View Demo</string>
-    <string name="title_activity_list_demo">ListDemo</string>
-    <string name="title_activity_spinner_demo">SpinnerDemoActivity</string>
+    <string name="title_activity_list_demo">List Demo</string>
+    <string name="title_activity_spinner_demo">Spinner Demo Activity</string>
     <string name="load_spinner_demo">Load Spinner Demo</string>
-    <string name="title_activity_grid_demo">GridDemoActivity</string>
+    <string name="title_activity_grid_demo">Grid Demo Activity</string>
     <string name="load_grid_demo">Load Grid Demo</string>
-    <string name="title_activity_activity_webview_demo">WebViewDemoActivity</string>
+    <string name="title_activity_activity_webview_demo">WebView Demo Activity</string>
     <string name="load_webview_demo">Load WebView Demo</string>
     <string name="url">http://droptokyo.com</string>
+    <string name="title_activity_action_bar_demo">ActionBar Demo Activity</string>
+    <string name="add">Add</string>
+    <string name="reset">Reset</string>
+    <string name="about">About</string>
+    <string name="about_toast">Billy Valvo\'s practice app</string>
+    <string name="load_actionbar_demo">Load ActionBar Demo</string>
 
 </resources>

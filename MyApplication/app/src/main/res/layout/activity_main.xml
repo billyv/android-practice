@@ -40,33 +40,48 @@
 
     </LinearLayout>
 
-    <Button
+    <LinearLayout
+        android:id="@+id/button_group"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/list_view_demo"
-        android:onClick="loadListDemo" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/load_spinner_demo"
-        android:onClick="loadSpinnerDemo"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/list_view_demo"
+            android:onClick="loadListDemo" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/load_grid_demo"
-        android:onClick="loadGridDemo"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/load_spinner_demo"
+            android:onClick="loadSpinnerDemo"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="@string/load_webview_demo"
-        android:onClick="loadWebViewDemo"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/load_grid_demo"
+            android:onClick="loadGridDemo"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/load_webview_demo"
+            android:onClick="loadWebViewDemo"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/load_actionbar_demo"
+            android:onClick="loadActionBarDemo"/>
+
+    </LinearLayout>
 
 
 

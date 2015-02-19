@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.billyvalvo.myapplication.ActionBarDemoActivity">
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item
+        android:id="@+id/add"
+        android:title="@string/add"
+        android:icon="@drawable/ic_action_new"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/reset"
+        android:title="@string/reset"
+        android:icon="@drawable/ic_action_refresh"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/about"
+        android:title="@string/about"
+        android:icon="@drawable/ic_action_about"
+        app:showAsAction="ifRoom" />
+
+</menu>
