@@ -23,5 +23,9 @@
     <string name="about">About</string>
     <string name="about_toast">Billy Valvo\'s practice app</string>
     <string name="load_actionbar_demo">Load ActionBar Demo</string>
+    <string name="title_activity_launch_demo">LaunchDemoActivity</string>
+    <string name="enter_url">Enter URL</string>
+    <string name="show_me">Show Me</string>
+    <string name="load_launch_demo">Load Launch Demo</string>
 
 </resources>

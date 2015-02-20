@@ -145,4 +145,9 @@ public class MainActivity extends ActionBarActivity {
         startActivity(actionBarDemo);
     }
 
+    public void loadLaunchDemo(View view) {
+        Intent launchDemo = new Intent(this, LaunchDemoActivity.class);
+        startActivity(launchDemo);
+    }
+
 }

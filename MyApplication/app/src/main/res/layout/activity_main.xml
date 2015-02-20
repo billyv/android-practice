@@ -81,6 +81,13 @@
             android:text="@string/load_actionbar_demo"
             android:onClick="loadActionBarDemo"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/load_launch_demo"
+            android:onClick="loadLaunchDemo"/>
+
     </LinearLayout>
 
 

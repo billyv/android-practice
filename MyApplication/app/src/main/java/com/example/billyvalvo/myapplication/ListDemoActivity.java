@@ -47,6 +47,8 @@ public class ListDemoActivity extends ActionBarActivity {
 
 
         // this is some ghetto way to implement a listener without extending ListActivity so I can keep action bar
+        // anonymous inner class: instance of a new class that extends AdapterView.OnItemClickListener
+        // with my specific instructions for listening (in this case to clicks)
         // inside method does following ...
         // set the text of the label above the list (selection) as the item you clicked,
         // signified by position (0 based counter for items in list, represented as 'items'
