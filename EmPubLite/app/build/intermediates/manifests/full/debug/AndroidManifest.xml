@@ -29,6 +29,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.commonsware.empublite.SimpleContentActivity"
+            android:parentActivityName="com.commonsware.empublite.EmPubLiteActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.commonsware.empublite.EmPubLiteActivity" />
+        </activity>
     </application>
 
 </manifest>

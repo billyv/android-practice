@@ -1,6 +1,7 @@
 package com.commonsware.empublite;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,9 +24,16 @@ public class EmPubLiteActivity extends Activity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 return true;
+
             case R.id.about:
+                Intent intent = new Intent(this, SimpleContentActivity.class);
+                startActivity(intent);
+
                 return true;
+
             case R.id.help:
+                intent = new Intent(this, SimpleContentActivity.class);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);

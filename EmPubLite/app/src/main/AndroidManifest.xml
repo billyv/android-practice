@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.commonsware.empublite" >
 
+    <supports-screens>
+        android:xlargeScreens="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false"
+    </supports-screens>
+
     <application
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
@@ -16,13 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SimpleContentActivity"
+            android:parentActivityName=".EmPubLiteActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.commonsware.empublite.EmPubLiteActivity" />
+        </activity>
     </application>
-
-    <supports-screens>
-        android:xlargeScreens="true"
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:smallScreens="false"
-    </supports-screens>
 
 </manifest>
