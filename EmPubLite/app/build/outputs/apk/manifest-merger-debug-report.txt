@@ -44,6 +44,7 @@ ADDED from AndroidManifest.xml:23:17
 		ADDED from AndroidManifest.xml:23:27
 activity#com.commonsware.empublite.SimpleContentActivity
 ADDED from AndroidManifest.xml:26:9
+<<<<<<< HEAD
 	android:parentActivityName
 		ADDED from AndroidManifest.xml:28:13
 	android:name
@@ -53,6 +54,19 @@ ADDED from AndroidManifest.xml:29:13
 	android:name
 		ADDED from AndroidManifest.xml:30:17
 	android:value
+=======
+	android:label
+		ADDED from AndroidManifest.xml:28:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:29:13
+	android:name
+		ADDED from AndroidManifest.xml:27:13
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from AndroidManifest.xml:30:13
+	android:value
+		ADDED from AndroidManifest.xml:32:17
+	android:name
+>>>>>>> 486e43b2e268ec61ba200dde609563c81911b178
 		ADDED from AndroidManifest.xml:31:17
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested

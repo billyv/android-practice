@@ -26,14 +26,25 @@ public class EmPubLiteActivity extends Activity {
                 return true;
 
             case R.id.about:
+<<<<<<< HEAD
                 Intent intent = new Intent(this, SimpleContentActivity.class);
                 startActivity(intent);
+=======
+                Intent i = new Intent(this, SimpleContentActivity.class);
+                startActivity(i);
+>>>>>>> 486e43b2e268ec61ba200dde609563c81911b178
 
                 return true;
 
             case R.id.help:
+<<<<<<< HEAD
                 intent = new Intent(this, SimpleContentActivity.class);
                 startActivity(intent);
+=======
+                i = new Intent(this, SimpleContentActivity.class);
+                startActivity(i);
+
+>>>>>>> 486e43b2e268ec61ba200dde609563c81911b178
                 return true;
         }
         return super.onOptionsItemSelected(item);
