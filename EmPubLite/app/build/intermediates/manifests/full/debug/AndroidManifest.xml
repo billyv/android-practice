@@ -31,10 +31,7 @@
         </activity>
         <activity
             android:name="com.commonsware.empublite.SimpleContentActivity"
-<<<<<<< HEAD
-=======
             android:label="@string/app_name"
->>>>>>> 486e43b2e268ec61ba200dde609563c81911b178
             android:parentActivityName="com.commonsware.empublite.EmPubLiteActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
