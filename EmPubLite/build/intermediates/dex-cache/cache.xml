@@ -2,39 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/Users/billyvalvo/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.8.0/a517f29ed06be2b2879524fcd94b6e9b36e2e0b5/retrofit-1.8.0.jar"
+        jar="C:\Users\Billy\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.8.0\a517f29ed06be2b2879524fcd94b6e9b36e2e0b5\retrofit-1.8.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="a517f29ed06be2b2879524fcd94b6e9b36e2e0b5">
-        <dex dex="/Users/billyvalvo/git/EmPubLite/app/build/intermediates/pre-dexed/debug/retrofit-1.8.0-e20b6967797acb382b9deaa38e944f8c33b30659.jar" />
+        <dex dex="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\pre-dexed\debug\retrofit-1.8.0-1a4875ad6b6f76f7620009c2aae7c43cbcbefdcc.jar" />
     </item>
     <item
-        jar="/Users/billyvalvo/.gradle/caches/modules-2/files-2.1/de.greenrobot/eventbus/2.4.0/ddd166d01b3158d1c00576d29f7ed15c030df719/eventbus-2.4.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
-        <dex dex="/Users/billyvalvo/git/EmPubLite/app/build/intermediates/pre-dexed/debug/eventbus-2.4.0-fa77a61eacd4efb48fe3721432e54016ec52cb4e.jar" />
-    </item>
-    <item
-        jar="/Users/billyvalvo/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/Users/billyvalvo/git/EmPubLite/app/build/intermediates/pre-dexed/debug/gson-2.3.1-ac380b97f7fce80a44bc40515c98dbd6d6979721.jar" />
-    </item>
-    <item
-        jar="/Users/billyvalvo/git/EmPubLite/app/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.3\libs\internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="0dcc55e70f7ebf7238fe2ec53f662eb378ab2668">
-        <dex dex="/Users/billyvalvo/git/EmPubLite/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-320c4167b50d10fcd35ba14461293716bfeceb2c.jar" />
+        <dex dex="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-2d503a9ffb9c0b4244a288e154aba9ba79dd524c.jar" />
     </item>
     <item
-        jar="/Users/billyvalvo/git/EmPubLite/app/build/intermediates/exploded-aar/com.android.support/support-v13/21.0.3/classes.jar"
+        jar="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-e33a06df91defdf81704b67d67ac216fba41512b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\exploded-aar\com.android.support\support-v13\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c2071dcaf7a008c3b01a6381a33be55396bab09">
-        <dex dex="/Users/billyvalvo/git/EmPubLite/app/build/intermediates/pre-dexed/debug/classes-198a97da841270cd280eb5faa5be64772c5bf176.jar" />
+        <dex dex="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\pre-dexed\debug\classes-70d51f71e70a53f0bdb0d61addf0249ce3e9f299.jar" />
+    </item>
+    <item
+        jar="C:\Users\Billy\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-307be439507b8f9ae8d23025987964a3bc4d7e60.jar" />
+    </item>
+    <item
+        jar="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\pre-dexed\debug\classes-49a2aab6574de02d6c588372e922ceffe0a9eeda.jar" />
+    </item>
+    <item
+        jar="C:\Users\Billy\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\pre-dexed\debug\gson-2.3.1-1a27fe5c4008d1a53e4095804cfacf60f6627bf9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Billy\.gradle\caches\modules-2\files-2.1\de.greenrobot\eventbus\2.4.0\ddd166d01b3158d1c00576d29f7ed15c030df719\eventbus-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ddd166d01b3158d1c00576d29f7ed15c030df719">
+        <dex dex="C:\Users\Billy\AndroidStudioProjects\android-practice\EmPubLite\app\build\intermediates\pre-dexed\debug\eventbus-2.4.0-08db07bde1241006c3e0d21e1a50bc7190e5dbb6.jar" />
     </item>
 
 </items>

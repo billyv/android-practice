@@ -5,12 +5,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.support.v4.view.ViewPager;
+import android.view.View;
 
 public class EmPubLiteActivity extends Activity {
+    private ViewPager pager = null;
+    private ContentsAdapter adapter = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        pager = (ViewPager) findViewById(R.id.pager);
+        adapter = new ContentsAdapter(this);
+        pager.setAdapter(adapter);
+        findViewById(R.id.progressBar1).setVisibility(View.GONE);
+        pager.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -26,25 +37,15 @@ public class EmPubLiteActivity extends Activity {
                 return true;
 
             case R.id.about:
-<<<<<<< HEAD
-                Intent intent = new Intent(this, SimpleContentActivity.class);
-                startActivity(intent);
-=======
                 Intent i = new Intent(this, SimpleContentActivity.class);
                 startActivity(i);
->>>>>>> 486e43b2e268ec61ba200dde609563c81911b178
 
                 return true;
 
             case R.id.help:
-<<<<<<< HEAD
-                intent = new Intent(this, SimpleContentActivity.class);
-                startActivity(intent);
-=======
                 i = new Intent(this, SimpleContentActivity.class);
                 startActivity(i);
 
->>>>>>> 486e43b2e268ec61ba200dde609563c81911b178
                 return true;
         }
         return super.onOptionsItemSelected(item);

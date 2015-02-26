@@ -13,10 +13,6 @@ android {
     }
 }
 
-configurations {
-    all*.exclude group: 'com.android.support', module: 'support-v4'
-}
-
 repositories {
     // This teaches Android Studio to load dependencies from Maven Central
     mavenCentral()
