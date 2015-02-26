@@ -93,6 +93,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.billyvalvo.myapplication.MainActivity" />
         </activity>
+        <activity
+            android:name=".AsyncDemoActivity"
+            android:label="@string/title_activity_async_demo"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.billyvalvo.myapplication.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

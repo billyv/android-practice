@@ -32,5 +32,9 @@
     <string name="pick">Pick</string>
     <string name="view">View</string>
     <string name="load_rotation_fragment_demo">Load Rotation Fragment Demo</string>
+    <string name="title_activity_async_demo">AsyncDemoActivity</string>
+
+    <string name="done">Finished AsyncTask</string>
+    <string name="load_async_demo">Load Async Demo</string>
 
 </resources>

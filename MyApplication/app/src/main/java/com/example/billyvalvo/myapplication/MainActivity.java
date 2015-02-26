@@ -155,4 +155,9 @@ public class MainActivity extends ActionBarActivity {
         startActivity(rotationFragmentDemo);
     }
 
+    public void loadAsyncDemo(View view) {
+        Intent asyncDemo = new Intent(this, AsyncDemoActivity.class);
+        startActivity(asyncDemo);
+    }
+
 }
