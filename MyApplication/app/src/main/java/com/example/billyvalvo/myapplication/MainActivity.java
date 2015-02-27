@@ -150,4 +150,9 @@ public class MainActivity extends ActionBarActivity {
         startActivity(launchDemo);
     }
 
+    public void loadRotationFragmentDemo(View view) {
+        Intent rotationFragmentDemo = new Intent(this, RotationFragmentDemoActivity.class);
+        startActivity(rotationFragmentDemo);
+    }
+
 }

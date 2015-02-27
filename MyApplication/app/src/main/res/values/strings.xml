@@ -27,5 +27,10 @@
     <string name="enter_url">Enter URL</string>
     <string name="show_me">Show Me</string>
     <string name="load_launch_demo">Load Launch Demo</string>
+    <string name="title_activity_rotation_fragment_demo">RotationFragmentDemoActivity</string>
+
+    <string name="pick">Pick</string>
+    <string name="view">View</string>
+    <string name="load_rotation_fragment_demo">Load Rotation Fragment Demo</string>
 
 </resources>
