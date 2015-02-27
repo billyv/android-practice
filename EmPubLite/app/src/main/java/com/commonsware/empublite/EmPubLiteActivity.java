@@ -38,12 +38,18 @@ public class EmPubLiteActivity extends Activity {
 
             case R.id.about:
                 Intent i = new Intent(this, SimpleContentActivity.class);
+                // Here we attach the appropriate file with the key EXTRA_FILE
+                // so that SimpleContentActivity has the info it needs to display the page.
+                i.putExtra(SimpleContentActivity.EXTRA_FILE,
+                        "file:///android_asset/misc/about.html");
                 startActivity(i);
 
                 return true;
 
             case R.id.help:
                 i = new Intent(this, SimpleContentActivity.class);
+                i.putExtra(SimpleContentActivity.EXTRA_FILE,
+                        "file:///android_asset/misc/help.html");
                 startActivity(i);
 
                 return true;
