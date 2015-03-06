@@ -90,8 +90,15 @@ public class EmPubLiteActivity extends Activity {
                 pager.setCurrentItem(0, false);
                 return true;
 
+            case R.id.notes:
+                Intent i = new Intent(this, NoteActivity.class);
+                i.putExtra(NoteActivity.EXTRA_POSITION, pager.getCurrentItem());
+                startActivity(i);
+
+                return true;
+
             case R.id.about:
-                Intent i = new Intent(this, SimpleContentActivity.class);
+                i = new Intent(this, SimpleContentActivity.class);
                 // Here we attach the appropriate file with the key EXTRA_FILE
                 // so that SimpleContentActivity has the info it needs to display the page.
                 i.putExtra(SimpleContentActivity.EXTRA_FILE,
