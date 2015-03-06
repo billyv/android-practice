@@ -17,6 +17,7 @@
 
     <item
         android:id="@+id/settings"
+        android:icon="@drawable/ic_action_settings"
         android:title="@string/settings"
         android:showAsAction="never">
     </item>

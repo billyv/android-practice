@@ -3,9 +3,12 @@ package com.commonsware.empublite;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.res.AssetManager;
 import android.os.Process;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,6 +20,7 @@ import com.google.gson.Gson;
 public class ModelFragment extends Fragment {
 
     private BookContents contents = null;
+    private SharedPreferences prefs = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,11 +33,11 @@ public class ModelFragment extends Fragment {
     public void onAttach(Activity host) {
         super.onAttach(host);
 
-        // For a LoadThread to populate book.
+        // Form a LoadThread to populate book.
         // Cannot getAssets until attached to host, so do this here
         // instead of in onCreate().
         if (contents == null) {
-            new LoadThread(host.getAssets()).start();
+            new LoadThread(host).start();
         }
     }
 
@@ -41,28 +45,35 @@ public class ModelFragment extends Fragment {
         return contents;
     }
 
-    private class LoadThread extends Thread {
-        private AssetManager assets = null;
+    public SharedPreferences getPrefs() {
+        return prefs;
+    }
 
-        LoadThread(AssetManager assets) {
+    private class LoadThread extends Thread {
+        private Context context = null;
+
+        LoadThread(Context context) {
             super();
 
-            this.assets = assets;
+            this.context = context.getApplicationContext();
             Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
         }
 
         @Override
         public void run() {
+            prefs = PreferenceManager.getDefaultSharedPreferences(context);
+
             Gson gson = new Gson();
 
             try {
-                InputStream is = assets.open("book/contents.json");
+                InputStream is = context.getAssets().open("book/contents.json");
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 
                 // How does fromJson know to create it properly as a BookContents object?
                 contents = gson.fromJson(reader, BookContents.class);
                 // Post our defined event to the event bus.
                 EventBus.getDefault().post(new BookLoadedEvent(contents));
+
             }
             catch (IOException e) {
                 Log.e(getClass().getSimpleName(), "Exception parsing Json", e);

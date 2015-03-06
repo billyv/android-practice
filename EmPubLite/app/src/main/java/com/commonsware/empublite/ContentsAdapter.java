@@ -11,6 +11,9 @@ public class ContentsAdapter extends FragmentStatePagerAdapter {
 
     private BookContents contents = null;
 
+    // You have to implement below two getItem and getCount but otherwise this is a standard
+    // implementation of FragmentStatePagerAdapter. These methods are not even taken advantage of
+    // in other parts in code. Just taking advantage of the superclass's workablity.
     public ContentsAdapter(Activity context, BookContents contents) {
         super(context.getFragmentManager());
         this.contents = contents;

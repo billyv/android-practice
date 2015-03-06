@@ -5,6 +5,12 @@
     <string name="about">About</string>
     <string name="app_name">EmPub Lite</string>
     <string name="help">Help</string>
+    <string name="keepscreenon_summary">Keep the screen powered on while the reader is in the foreground</string>
+    <string name="keepscreenon_title">Keep Screen On</string>
+    <string name="lastposition_summary">Save the last chapter you were viewing and open up on that chapter when re-opening the app</string>
+    <string name="lastposition_title">Save Last Position</string>
+    <string name="prefdesc">Settings for use of EmPubLite</string>
+    <string name="preftitle">Display and Navigation</string>
     <string name="settings">Settings</string>
     <!-- From: file:/C:/Users/Billy/AndroidStudioProjects/android-practice/EmPubLite/app/src/main/res/values/styles.xml -->
     <eat-comment/>

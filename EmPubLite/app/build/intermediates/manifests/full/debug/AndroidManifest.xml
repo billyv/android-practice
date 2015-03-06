@@ -37,6 +37,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.commonsware.empublite.EmPubLiteActivity" />
         </activity>
+        <activity android:name="com.commonsware.empublite.Preferences" >
+        </activity>
     </application>
 
 </manifest>
