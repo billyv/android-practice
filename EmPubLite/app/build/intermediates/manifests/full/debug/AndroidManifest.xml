@@ -16,6 +16,8 @@
     </supports-screens>
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="false"
@@ -48,6 +50,12 @@
             android:name="com.commonsware.empublite.DownloadCheckService"
             android:exported="false" >
         </service>
+
+        <receiver android:name="com.commonsware.empublite.UpdateReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

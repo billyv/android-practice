@@ -1,5 +1,6 @@
 package com.commonsware.empublite;
 
+import com.commonsware.cwac.wakeful.WakefulIntentService;
 import android.app.IntentService;
 import android.content.Intent;
 import android.os.*;
@@ -29,7 +30,7 @@ import retrofit.RestAdapter;
  * <p/>
  * TODO: Customize class - update intent actions and extra parameters.
  */
-public class DownloadCheckService extends IntentService {
+public class DownloadCheckService extends WakefulIntentService {
 
     private static final String OUR_BOOK_DATE = "20120418";
     private static final String UPDATE_FILENAME = "book.zip";
@@ -40,7 +41,7 @@ public class DownloadCheckService extends IntentService {
     }
 
     @Override
-    protected void onHandleIntent(Intent intent) {
+    protected void doWakefulWork(Intent intent) {
         try {
             String url = getUpdateUrl();
 

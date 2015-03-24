@@ -12,6 +12,8 @@ import android.view.MenuItem;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
+import com.commonsware.cwac.wakeful.WakefulIntentService;
+
 import de.greenrobot.event.EventBus;
 
 public class EmPubLiteActivity extends Activity {
@@ -36,6 +38,8 @@ public class EmPubLiteActivity extends Activity {
         pager = (ViewPager) findViewById(R.id.pager);
 
         getActionBar().setHomeButtonEnabled(true);
+
+        UpdateReceiver.scheduleAlarm(this);
     }
 
     @Override
@@ -98,7 +102,7 @@ public class EmPubLiteActivity extends Activity {
                 return true;
 
             case R.id.update:
-                startService(new Intent(this, DownloadCheckService.class));
+                WakefulIntentService.sendWakefulWork(this, DownloadCheckService.class);
 
                 return true;
 
