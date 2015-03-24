@@ -1,8 +1,11 @@
 package com.commonsware.empublite;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,13 +13,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ShareActionProvider;
 
 import de.greenrobot.event.EventBus;
 
 /**
  * Created by Billy on 2015-03-06.
  */
-public class NoteFragment extends Fragment {
+public class NoteFragment extends Fragment implements TextWatcher {
 
     public interface Contract {
         void closeNotes();
@@ -24,6 +28,9 @@ public class NoteFragment extends Fragment {
 
     private static final String KEY_POSITION = "position";
     private EditText editor = null;
+    private ShareActionProvider share = null;
+    private Intent shareIntent = new Intent(Intent.ACTION_SEND).setType("text/plain"); // set MIME type of intent
+
 
     static NoteFragment newInstance(int position) {
         NoteFragment frag = new NoteFragment();
@@ -46,6 +53,14 @@ public class NoteFragment extends Fragment {
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.notes, menu);
 
+        // ShareActionProvider is android's own solution for ACTION_SEND functionality.
+        // Basically, they do the work of creating an action bare share item.
+        // Part of the set up happens in the menu.
+        // It creates an action bar share item that drops down within the view, and allows
+        // user to decide how to ACTION_SEND whatever.
+        share = (ShareActionProvider)menu.findItem(R.id.share).getActionProvider();
+        share.setShareIntent(shareIntent);
+
         super.onCreateOptionsMenu(menu, inflater);
     }
 
@@ -61,7 +76,7 @@ public class NoteFragment extends Fragment {
             // to other activities (in addition to EventBus, etc) but in fact
             // this is merely asking the hosting activity to finish() which could
             // be accomplished much more easily here by calling
-            // getActivity().finish(); 
+            // getActivity().finish();
 
             return true;
         }
@@ -74,6 +89,10 @@ public class NoteFragment extends Fragment {
         View result = inflater.inflate(R.layout.editor, container, false);
 
         editor = (EditText) result.findViewById(R.id.editor);
+        // Here we set the fragment to listen for changes to the text.
+        // This is so that for every change we can update what will be
+        // potentially shared if the user pressed share.
+        editor.addTextChangedListener(this);
 
         return result;
     }
@@ -123,6 +142,23 @@ public class NoteFragment extends Fragment {
     // which dictates that they implement closeNotes()
     private Contract getContract() {
         return (Contract)getActivity();
+    }
+
+    // These following three methods are required by TextWatcher interface.
+    @Override
+    public void afterTextChanged(Editable s) {
+        // Update share intent with each time text changes
+        shareIntent.putExtra(Intent.EXTRA_TEXT, s.toString());
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        // Ignored
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        // Ignored
     }
 
 }

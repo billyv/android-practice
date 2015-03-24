@@ -11,6 +11,8 @@ import android.os.Process;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -33,11 +35,26 @@ public class ModelFragment extends Fragment {
     public void onAttach(Activity host) {
         super.onAttach(host);
 
+        EventBus.getDefault().register(this);
+
         // Form a LoadThread to populate book.
         // Cannot getAssets until attached to host, so do this here
         // instead of in onCreate().
         if (contents == null) {
             new LoadThread(host).start();
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        EventBus.getDefault().unregister(this);
+
+        super.onDetach();
+    }
+
+    public void onEventBackgroundThread(BookUpdatedEvent event) {
+        if (getActivity() != null) {
+            new LoadThread(getActivity()).start();
         }
     }
 
@@ -65,12 +82,28 @@ public class ModelFragment extends Fragment {
 
             Gson gson = new Gson();
 
+            File baseDir = new File(context.getFilesDir(), DownloadCheckService.UPDATE_BASEDIR);
+
             try {
-                InputStream is = context.getAssets().open("book/contents.json");
+                InputStream is;
+
+                if (baseDir.exists()) {
+                    is = new FileInputStream(new File(baseDir, "contents.json"));
+                }
+                else {
+                    is = context.getAssets().open("book/contents.json");
+                }
+
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 
                 // How does fromJson know to create it properly as a BookContents object?
                 contents = gson.fromJson(reader, BookContents.class);
+                is.close();
+
+                if (baseDir.exists()) {
+                    contents.setBaseDir(baseDir);
+                }
+
                 // Post our defined event to the event bus.
                 EventBus.getDefault().post(new BookLoadedEvent(contents));
 

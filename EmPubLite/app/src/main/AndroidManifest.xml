@@ -8,6 +8,8 @@
         android:normalScreens="true"
         android:smallScreens="false"
     </supports-screens>
+    
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="false"
@@ -31,12 +33,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.commonsware.empublite.EmPubLiteActivity" />
         </activity>
-        <activity
-            android:name=".Preferences" >
+        <activity android:name=".Preferences" >
         </activity>
-        <activity
-            android:name=".NoteActivity" >
+        <activity android:name=".NoteActivity" >
         </activity>
+
+        <service
+            android:name=".DownloadCheckService"
+            android:exported="false" >
+        </service>
     </application>
 
 </manifest>

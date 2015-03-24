@@ -9,6 +9,13 @@
     </item>
 
     <item
+        android:id="@+id/update"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/update"
+        android:showAsAction="ifRoom|withText">
+    </item>
+
+    <item
         android:id="@+id/help"
         android:icon="@drawable/ic_action_help"
         android:title="@string/help"

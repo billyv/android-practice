@@ -97,6 +97,11 @@ public class EmPubLiteActivity extends Activity {
 
                 return true;
 
+            case R.id.update:
+                startService(new Intent(this, DownloadCheckService.class));
+
+                return true;
+
             case R.id.about:
                 i = new Intent(this, SimpleContentActivity.class);
                 // Here we attach the appropriate file with the key EXTRA_FILE

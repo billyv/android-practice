@@ -15,6 +15,8 @@
         android:smallScreens="false"
     </supports-screens>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
@@ -41,6 +43,11 @@
         </activity>
         <activity android:name="com.commonsware.empublite.NoteActivity" >
         </activity>
+
+        <service
+            android:name="com.commonsware.empublite.DownloadCheckService"
+            android:exported="false" >
+        </service>
     </application>
 
 </manifest>
